@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dijkstra/static/css/main.2a0038fd.css",
+    "main.js": "/dijkstra/static/js/main.70766a65.js",
+    "index.html": "/dijkstra/index.html",
+    "main.2a0038fd.css.map": "/dijkstra/static/css/main.2a0038fd.css.map",
+    "main.70766a65.js.map": "/dijkstra/static/js/main.70766a65.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a0038fd.css",
+    "static/js/main.70766a65.js"
+  ]
+}
