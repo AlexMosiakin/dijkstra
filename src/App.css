@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+.appWrapper{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gridWrapper{
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    width: 70%;
+    margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid rgb(0, 174, 255);
+    width: 100%;
+    height: 2.6em;
+    transition: 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cell.start{
+    background: green
 }
 
-.App-link {
-  color: #61dafb;
+.cell.finish{
+    background: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cell.visited{
+    background: blue
+}
+
+.cell.wall{
+    background: rgb(224, 7, 177) 
+}
+
+.cell.shortest{
+    background: rgb(255, 195, 15)
+}
+
+.cell.noStart:hover{
+    background: green
+}
+
+.cell.noFinish:hover{
+    background: red
+}
+
+.cell>*{
+    pointer-events: none;
+}
+
+.button{
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.button:hover{
+    transform: scale(1.1);
+}
+
+.start{
+    background: rgb(0 174 255);
+}
+
+.reload{
+    background: rgb(255, 195, 15);
+}
+
+.appWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Helvetica;
+}
+
+.appHeader{
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 1em 0;
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+}
+
+.btnsWrapper{
+    padding: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btnsWrapper > button:first-of-type{
+    margin-right: 20px;
+}
+
+
+@media screen and (max-width: 1439px) {
+    .gridWrapper{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .appHeader{
+        font-size: 1.7em;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .appHeader{
+        font-size: 1.3em;
+    }
+    .appHeader{
+        font-size: 1.5em;
+    }
+    .cell{
+        height: 1.5em;
+    }
 }
